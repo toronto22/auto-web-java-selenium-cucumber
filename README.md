@@ -1,4 +1,4 @@
-# Web app selenium TestNG autotest
+# Web app selenium Cucumber autotest
 This is a Web Application's automation test script that following 
 page object model approach. The project support Allure report and CICD with Jenkins.
 
@@ -55,9 +55,9 @@ To create Jenkins Pipeline for our project, we follow those steps:
 - Click `New item`
 - Enter `valid name`, select `pipeline option` and click `ok`
 - In Project Configure page we scroll down to Pipeline section and select `Definition` field with `Pipeline Script from SCM` value
-- Select `SCM` field to `Git` value 
-- Input our project git repository in to `Repository URL` (Example: https://github.com/toronto22/web-app-selenium-junit4-autotest.git)
-- Select the valid Credential of our `Github account` //TODO How to add new Github credential to jenkins 
+- Select `SCM` field to `Git` value
+- Input our project git repository in to `Repository URL`
+- Select the valid Credential of our `Github account` //TODO How to add new Github credential to jenkins
 - Select `Branch Specifier` field with the branch you want to apply pipeline
 - With `Script Path` we can keep the `Jenkinsfile` value or change it if we move the Jenkinsfile to other folder
 - Click on `Save`

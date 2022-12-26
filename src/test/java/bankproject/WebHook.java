@@ -2,16 +2,15 @@ package bankproject;
 
 import bankproject.helper.ConfigurationHelper;
 import bankproject.helper.webdriver.DriverFactory;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 
 import java.io.ByteArrayInputStream;
 
@@ -24,7 +23,7 @@ public class WebHook {
         return driver;
     }
 
-    @BeforeMethod
+    @Before
     @Step("Open browser")
     public void BaseSetup() {
         Boolean isGrid = config.IsSeleniumGrid;
@@ -33,7 +32,7 @@ public class WebHook {
         driver = DriverFactory.generateDriver(browser, isGrid);
     }
 
-    @AfterMethod
+    @After
     @Step("Close browser")
     public void BaseTearDown(ITestResult testResult) {
         if (!testResult.isSuccess()) {

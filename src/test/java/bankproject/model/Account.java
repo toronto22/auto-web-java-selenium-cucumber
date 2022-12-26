@@ -1,19 +1,21 @@
 package bankproject.model;
 
 public class Account {
-    public String CustomerName;
-    public String AccountNumber;
-    public int Balance;
-    public String Currency;
+    public String customerName;
+    public String accountNumber;
+    public int balance;
+    public String currency;
+
     public Account(String customerName, String accountNumber, int balance, String currency) {
-        CustomerName = customerName;
-        AccountNumber = accountNumber;
-        Balance = balance;
-        Currency = currency;
+        this.customerName = customerName;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.currency = currency;
     }
+
     public Account(String customerName, String accountNumber, String currency) {
-        CustomerName = customerName;
-        AccountNumber = accountNumber;
-        Currency = currency;
+        this.customerName = customerName;
+        this.accountNumber = accountNumber;
+        this.currency = currency;
     }
 }
